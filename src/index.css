@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@layer base {
+  h1,.h1 {
+    @apply text-2xl font-semibold;
+  }
+  h2,.h2 {
+  }
+  h3,.h3 {
+    @apply text-2xl font-bold
+  }
+  h4,.h4 {
+    @apply text-lg
+  }
+  h5,.h5 {
+  }
+  h6,.h6 {
+    @apply text-light-dray text-xs;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif !important;
+    }  
+    .main-content{
+      height: calc(100vh - 153px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    @media only screen and (max-width: 1199px) {
+      .main-content{
+        height: calc(100vh - 113px);
+      }
+      h1,.h1 {
+        @apply text-xl font-semibold;
+      }
+      h3,.h3 {
+        @apply text-xl font-bold
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .main-content {
+        height: calc(100vh - 81px);
+      }
+    }
+}
+/* tailwind css modification end  */
+
+:where(.css-dev-only-do-not-override-jnywrb).ant-badge .ant-badge-dot{
+  background: #6e62e5;
+}
+.transition-select :where(.css-dev-only-do-not-override-jnywrb).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  background-color: #f6f6f6;
+  border: 0;
+}
+:where(.css-dev-only-do-not-override-jnywrb).ant-table-wrapper .ant-table-thead >tr>th, :where(.css-dev-only-do-not-override-jnywrb).ant-table-wrapper .ant-table-thead >tr>td{
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(150 158 167);
+}
+:where(.css-dev-only-do-not-override-1jz8uk2).ant-picker-calendar .ant-picker-content th{
+  font-size: 12px;
+  color: rgb(150 158 167);
+}
+:where(.css-dev-only-do-not-override-1jz8uk2).ant-picker-calendar .ant-picker-panel{
+  border-top: 0;
+}
+@media only screen and (max-width: 767px) {
+  :where(.css-dev-only-do-not-override-jnywrb).ant-layout .ant-layout-sider{
+    position: fixed;
+    height: 100vh;
+    z-index: 1;
+  }
+  :where(.css-dev-only-do-not-override-jnywrb).ant-layout .ant-layout-sider.ant-layout-sider-collapsed{
+    opacity: 0;
+    visibility: hidden;
+  }
+  :where(.css-dev-only-do-not-override-jnywrb).ant-menu-light .ant-menu-item-selected, :where(.css-dev-only-do-not-override-jnywrb).ant-menu-light>.ant-menu .ant-menu-item-selected {
+    background-color: #6e62e5;
+    color: #fff;
+  }
+
+}
